@@ -31,7 +31,7 @@ CSG generate(){
 	// Stub of a CAD object
 	CSG part = new Cylinder(collarDiameterValue/2,colarHeightValue).toCSG()
 				.union(vitamin_capScrew)
-				.union(shaft)
+				.difference(shaft)
 	return part
 		.setParameter(size)
 		.setRegenerate({generate()})
